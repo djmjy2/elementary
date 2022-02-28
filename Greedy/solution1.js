@@ -2,6 +2,9 @@ function solution(n, lost, reserve) {
   let answer = n - lost.length;
   let tmp_lost = [];
   
+  lost.sort();
+  reserve.sort();
+  
   // lost와 reserve 두 개 모두 해당되는 학생은 reserve에서 빼고 answer 1 증가
   for (let i = 0; i < lost.length; i++) {
       if (reserve.includes(lost[i])) {
